@@ -1,0 +1,95 @@
+
+:global(.post-info) {
+  margin-top: 0px;
+  font-size: 0.8rem;
+  line-height: normal;
+  opacity: 0.6;
+}
+
+:global(.flag) {
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+:global(.flag-icon-es.flag-icon-squared) {
+  background-image: url(../../assets/es.svg);
+  width: 1em;
+  height: 1em; /* Asegúrate de incluir la altura */
+}
+
+:global(.flag-icon) {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+
+}
+:global(.flag-icon:hover) {
+  transform: scale(1.2); /* Escalar ligeramente al pasar el ratón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box; /* Asegura que padding no expanda el tamaño del contenedor */
+
+  img {
+    max-width: 250px;
+    align-self: center;
+    background-color: var(--project-card-bg);
+    border-radius: 20px;
+  }
+
+  a {
+    width: fit-content;
+    text-decoration: none;
+    color: #222;
+    transition: transform 200ms ease-in-out;
+  }
+
+  a:hover {
+    transform: scale(1.05);
+  }
+}
+
+p{
+text-align: center;
+  margin: 0 auto; /* Centra el texto */
+  padding: 10px; /* Espacio interno más pequeño */
+}
+
+.descriptionAbout {
+  margin: 0 auto; /* Ajusta el margen lateral para centrar */
+  padding: 10px 5%; /* Espacio interno más dinámico */
+  font-size: 1rem; /* Asegúrate de un tamaño legible */
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  gap: 30px;
+
+  max-width: 1200px; /* Ancho máximo del texto */
+  margin: 0 auto; /* Centrar contenido */
+  font-size:30px;
+}
+
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (width >= 800px) {
+  .projectsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
+}
