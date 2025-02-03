@@ -1,3 +1,7 @@
+# Release
+
+[Official Web](https://lucasgarciadominguez.com)
+
 # Deploy
 
 https://lucasgarciadominguez.netlify.app
