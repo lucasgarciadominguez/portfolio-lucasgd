@@ -1,5 +1,6 @@
 import styles from './ProjectsStyles.module.css';
 
+import express from '../../assets/APIsChatbot.png';
 import asp from '../../assets/aspminimalapi.png';
 import cinemareact from '../../assets/cinemareact.png';
 import portfolio from '../../assets/portfolio.png';
@@ -30,16 +31,22 @@ function Projects() {
       <section className={styles.sectionProjectsContainer}>
         <h2 className="sectionTitle">Web Development</h2>
         <div className={styles.projectsContainer}>
+        <ProjectCard
+            src={express}
+            link="https://github.com/lucasgarciadominguez/chatbots-api-comparator"
+            h3="Chatbots API"
+            p="Express API"
+          />
           <ProjectCard
             src={asp}
             link="https://github.com/lucasgarciadominguez/minimal-API-ASP.NET"
-            h3="Minimal API ASP.NET"
-            p="API"
+            h3="Minimal API "
+            p="ASP.NET API"
           />
           <ProjectCard
             src={cinemareact}
             link="https://github.com/lucasgarciadominguez/cinema-react"
-            h3="Cinema React"
+            h3="Cinema Website"
             p="React"
           />
           <ProjectCard
@@ -97,13 +104,13 @@ function Projects() {
           <ProjectCard
             src={bullet}
             link="https://github.com/lucasgarciadominguez/3d-animation-with-bullet"
-            h3="3D Animation Bullet"
+            h3="3D Animation"
             p="SFML & Bullet Project"
           />
           <ProjectCard
             src={box2d}
             link="https://github.com/lucasgarciadominguez/2d-animation-with-box2D"
-            h3="2D Animation Box2D"
+            h3="2D Animation"
             p="SFML & Box2D Project"
           />
         </div>
@@ -114,7 +121,7 @@ function Projects() {
           <ProjectCard
             src={chess}
             link="https://github.com/lucasgarciadominguez/-Piedra-Papel-Jaque-Mate-"
-            h3="Piedra, Papel, Jaque Mate!"
+            h3="Chess Mobile Game"
             p="Unity Mobile Game"
           />
           <ProjectCard

@@ -4,7 +4,7 @@ function Footer() {
   return (
     <section id="footer" className={styles.container}>
       <p>
-        &copy; 2024 Lucas Garcia Dominguez. <br />
+        &copy; 2025 Lucas Garcia Dominguez. <br />
         All rights reserved.
       </p>
     </section>
