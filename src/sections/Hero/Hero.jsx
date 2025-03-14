@@ -6,6 +6,8 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
+import youtubeLight from '../../assets/youtube-light.svg';
+import youtubeDark from '../../assets/youtube-dark.svg';
 import CV from '../../assets/LucasGarciaDominguezCVEnglish.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
@@ -15,6 +17,8 @@ function Hero() {
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const youtubeIcon = theme === 'light' ? youtubeLight : youtubeDark;
+
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
@@ -46,6 +50,9 @@ function Hero() {
           </a>
           <a href="https://www.linkedin.com/in/lucas-garcia-dominguez/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
+          </a>
+          <a href="https://youtube.com/@lucasgarciadominguez?si=K0nPqC6DsSNP6qwL" target="_blank">
+            <img src={youtubeIcon} alt="Youtube icon" />
           </a>
         </span>
         <p className={styles.description}>
