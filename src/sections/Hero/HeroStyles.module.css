@@ -14,7 +14,6 @@ body {
   flex-shrink: 0; /* Evita que esta sección se reduzca al cambiar la fuente */
   flex-grow: 0; /* Evita que esta sección se expanda */
 
-
   .hero {
     max-width: 200px;
   }
@@ -46,12 +45,11 @@ body {
     border-radius: 20px;
     width: 126px;
     height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   }
-
   button:hover {
     transform: scale(1.05);
   }
@@ -59,6 +57,10 @@ body {
   button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  .redButton {
+  background-color: #fe5186;
+  color: --btn-text-color;
   }
 }
 
@@ -88,6 +90,13 @@ body {
   max-width: 24ch;
 }
 
+.options {
+  display: flex;
+  align-self: center;
+  gap: 20px;
+  
+
+}
 .info {
   display: flex;
   flex-direction: column;
@@ -138,3 +147,4 @@ h2 {
     opacity: 0; 
   }
 }
+

@@ -58,9 +58,14 @@ function Hero() {
         <p className={styles.description}>
         Passionate backend developer with 6+ years in C++ and C#, now specializing in .NET technologies and full-stack development with React.
         </p>
-        <a href={CV} download>
-          <button className="hover">Resume</button>
-        </a>
+        <div className={styles.options}>
+          <a href={CV} download>
+            <button className="hover">Resume</button>
+          </a>
+          <a href={CV} download>
+            <button className={`hover ${styles.redButton}`}>Work Experience</button>
+          </a>
+        </div>
       </div>
     </section>
   );
