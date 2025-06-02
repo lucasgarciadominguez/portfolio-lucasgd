@@ -36,13 +36,13 @@ h2,
 h3,
 p {
   color: var(--text-color);
-  margin: 0;
   padding: 0;
 }
 
 h2,
 time,
-p {
+p,
+li {
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -75,7 +75,7 @@ button,input {
   font-style: normal;
 }
 
-p {
+p, li {
   font-size: 16px;
   font-weight: 300;
 }
@@ -89,6 +89,12 @@ p {
   cursor: pointer;
 }
 
+@media (width <= 1000px) {
+  .sectionTitle {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
 @media (width >= 800px) {
   #root {
     gap: 100px;
@@ -112,7 +118,7 @@ p {
 
   @media (width >= 1400px) {
     #root {
-      gap: 200px;
+      /*gap: 200px;*/
     }
     h1 {
       font-size: 48px;
@@ -122,5 +128,6 @@ p {
       margin-bottom: 75px;
     }
   }
+
 }
 

@@ -119,17 +119,28 @@
 
 }
 
+.isPresentContent{
+  font-size: 15px;
+  color: greenyellow;
+}
+
 .descriptionContent{
   padding-left: 0%;
   font-size: 15px;
   text-align: left;
   color: var(--footer-text-color);
-
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
+}
+
+@media (width <= 800px) {
+
+  .workCardContent{
+    margin-right: 5%;
+  }
 }
 
 @media (width >= 800px) {

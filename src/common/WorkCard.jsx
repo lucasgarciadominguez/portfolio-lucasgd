@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown } from 'lucide-react';  // Imports arrowdown from lucide-react library
 import styles from '../sections/Work/WorkStyles.module.css';
 
-function WorkCard({ src, link, h3, p, time, p2, isLast }) {
+function WorkCard({ src, link, h3, p, time, p2, isLast, isPresent }) {
   return (
     <div className={styles.workCardWrapper}>
       <div className={styles.leftBlock}>
@@ -22,7 +22,18 @@ function WorkCard({ src, link, h3, p, time, p2, isLast }) {
         </a>
         <p className={styles.professionContent}>{p}</p>
         {time && <time className={styles.dateContent}>{time}</time>}
-        {p2 && <p className={styles.descriptionContent}>{p2}</p>}
+        {isPresent && (
+          <time className={styles.isPresentContent}>PRESENT</time>
+        )}
+        {p2 && Array.isArray(p2) ? (
+          <ul className={styles.descriptionContent}>
+            {p2.map((item, index) => (
+              <li key={index} className={styles.descriptionContent}>{item}</li>
+            ))}
+          </ul>
+          ) : (
+          <p className={styles.descriptionContent}>{p2}</p>
+        )}
       </div>
     </div>
   );

@@ -11,8 +11,8 @@ import youtubeDark from '../../assets/youtube-dark.svg';
 import CV from '../../assets/LucasGarciaDominguezCVEnglish.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
-function Hero() {
-  const { theme, toggleTheme } = useTheme();
+function Hero({ onShowWork }) {
+const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
@@ -62,8 +62,8 @@ function Hero() {
           <a href={CV} download>
             <button className="hover">Resume</button>
           </a>
-          <a href={CV} download>
-            <button className={`hover ${styles.redButton}`}>Work Experience</button>
+          <a>
+            <button className={`hover ${styles.redButton}`} onClick={onShowWork} >Work Experience</button>
           </a>
         </div>
       </div>

@@ -98,4 +98,25 @@ text-align: center;
     justify-content: space-evenly;
     padding: 0 30px;
   }
+  .descriptionAbout{
+    font-size:  1.5rem; 
+    margin: 5%;
+  }
 }
+
+@media (width <= 800px) {
+
+  .descriptionAbout{
+    font-size:  1.1rem; 
+    margin: 5%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px){ /*for Ipad Mini and other strange resolutions*/
+
+  .descriptionAbout{
+    font-size:  1.5rem; 
+    margin: 5%;
+  }
+}
+

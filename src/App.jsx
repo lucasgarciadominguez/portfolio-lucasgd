@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import About from './sections/About/About';
 import Contact from './sections/Contact/Contact';
@@ -9,12 +10,13 @@ import Skills from './sections/Skills/Skills';
 import Certificates from './sections/Certificates/Certificates';
 
 function App() {
+  const [showWork, setShowWork] = useState(false);
+
   return (
     <>
-    
-      <Hero />
-      <Work/>
-      <About/>
+      <Hero onShowWork={() => setShowWork(true)} /> {/* enables the work experience section */}
+      {showWork && <Work />}
+      <About />
       <Projects />
       <Skills />
       <Certificates />
@@ -23,5 +25,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

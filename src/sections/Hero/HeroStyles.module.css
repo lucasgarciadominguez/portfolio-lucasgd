@@ -11,8 +11,8 @@ body {
   text-align: center;
   height: 110dvh;
   min-height: 500px;
-  flex-shrink: 0; /* Evita que esta sección se reduzca al cambiar la fuente */
-  flex-grow: 0; /* Evita que esta sección se expanda */
+  flex-shrink: 0;
+  flex-grow: 0; 
 
   .hero {
     max-width: 200px;
@@ -74,7 +74,7 @@ body {
   right: 1;
   width: 25px;
 
-  height: auto; /* Asegúrate de que mantenga su proporción */
+  height: auto;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 
@@ -82,7 +82,7 @@ body {
 
 .colorMode:hover {
   cursor: pointer;
-  transform: scale(1.1); /* Pequeño efecto al pasar el ratón */
+  transform: scale(1.1);
 
 }
 
@@ -112,11 +112,85 @@ body {
   animation: cursor 1s infinite;
 }
 h2 {
-  display: inline-flex; /* Para garantizar la alineación entre texto y cursor */
-  margin: 0 auto; /* Ajusta el margen lateral para centrar */
+  display: inline-flex;
+  margin: 0 auto;
 
   align-items: center;
 }
+
+@media (max-width: 400px) {
+  body {
+    margin-top: 0px;
+  }
+
+  .container {
+    height: 97vh;
+    min-height: auto;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero {
+    max-width: 130px;
+    width: 100%;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    max-width: 22ch;
+    margin: 0 auto;
+  }
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  span {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  span a img {
+    width: 24px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .logo__cursor {
+    height: 1rem;
+    width: 6px;
+  }
+
+
+  .options a {
+    align-self: center;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+    padding: 0;
+  }
+
+  .colorMode {
+    top: 5px;
+    right: 5px;
+    width: 20px;
+  }
+}
+
 @media (width >= 800px) {
   .container {
     flex-direction: row-reverse;
@@ -137,6 +211,13 @@ h2 {
       width: 400px;
     }
   }
+}
+
+@media (min-width: 700px) and (max-width: 800px){ /*for Ipad Mini and other strange resolutions*/
+
+.description {
+  font-size: 1.2rem;
+}
 }
 
 @keyframes cursor {

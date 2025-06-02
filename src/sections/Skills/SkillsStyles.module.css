@@ -33,6 +33,8 @@ hr {
 
 @media (width >= 800px) {
   .skillList {
+    margin-right: 5%;
+    margin-left: 5%;
     max-width: fit-content;
     gap: 30px;
 
@@ -45,3 +47,22 @@ hr {
     width: 300px;
   }
 }
+
+@media (min-width: 700px) and (max-width: 800px){ /*for Ipad Mini and other strange resolutions*/
+
+  .skillList {
+    margin-right: 5%;
+    margin-left: 5%;
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  hr {
+    width: 300px;
+  }
+}
+
